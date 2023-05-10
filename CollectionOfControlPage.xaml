@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.CollectionOfControlPage"
+             Title="CollectionOfControlPage">
+    <ScrollView>
+    <VerticalStackLayout>
+        <Label 
+            Text="Welcome to .NET MAUI! Collection of Control"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        
+        <!--Carousel View/Slide View-->
+        <!--<CarouselView  IndicatorView="Indicator1">
+            <CarouselView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Prince</x:String>
+                    <x:String>Rishabh</x:String>
+                    <x:String>Sidharth</x:String>
+                    <x:String>Abhishek</x:String>
+                    <x:String>Nitesh</x:String>
+                </x:Array>
+            </CarouselView.ItemsSource>
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Frame Margin="10"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               HeightRequest="200"
+                               HasShadow="False"
+                               CornerRadius="5"
+                               BorderColor="Red"
+                               BackgroundColor="Bisque">
+                            <Label Text="{Binding .}"/>
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        <IndicatorView x:Name="Indicator1"
+                       HorizontalOptions="Center"
+                       IndicatorColor="Gray"
+                       SelectedIndicatorColor="Red"/>-->
+        
+        <!--List View-->
+        <ListView HasUnevenRows="True">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Prince</x:String>
+                    <x:String>Rishabh</x:String>
+                    <x:String>Sidharth</x:String>
+                    <x:String>Abhishek</x:String>
+                    <x:String>Nitesh</x:String>
+                    <x:String>NiKhil</x:String>
+                </x:Array>
+            </ListView.ItemsSource>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                    <StackLayout>
+                        <Frame Margin="10"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               HeightRequest="100"
+                               HasShadow="False"
+                               CornerRadius="5"
+                               BorderColor="Red"
+                               BackgroundColor="Bisque">
+                            <Label Text="{Binding .}"/>
+                        </Frame>
+                    </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+        <!--Collection View-->
+            <!--<CollectionView >
+                <CollectionView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Prince</x:String>
+                        <x:String>Rishabh</x:String>
+                        <x:String>Sidharth</x:String>
+                        <x:String>Abhishek</x:String>
+                        <x:String>Nitesh</x:String>
+                    </x:Array>
+                </CollectionView.ItemsSource>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                            <StackLayout>
+                                <Frame Margin="10"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               HeightRequest="100"
+                               HasShadow="False"
+                               CornerRadius="5"
+                               BorderColor="Red"
+                               BackgroundColor="Bisque">
+                                <Label Text="{Binding .}"/>
+                                </Frame>
+                            </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>-->
+        
+        <!-- Picker Control-->
+            <!--<Picker >
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Prince</x:String>
+                        <x:String>Rishabh</x:String>
+                        <x:String>Sidharth</x:String>
+                        <x:String>Abhishek</x:String>
+                        <x:String>Nitesh</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>-->
+        
+        <!--Table View-->
+            <!--<TableView Intent="Form">
+                <TableRoot>
+                    <TableSection Title="First">
+                        <TextCell Text="First" Detail="Detail Of My First cell"/>
+                        <EntryCell Text="First Entry Cell" Label="Entry Label"/>
+                        <SwitchCell Text="Tabel Entry"/>
+                        <ImageCell Text="Dotnet Maui Image " Detail="About dotnet Maui"
+                                   ImageSource="dotnet_bot.svg"/>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+            <TableView Intent="Form">
+                <TableRoot>
+                    <TableSection Title="Second">
+                        <TextCell Text="Second text Cell" Detail="Detail of second cell"/>
+                        <EntryCell Text="Second Entry Cell" Label="Entry Label"/>
+                        <SwitchCell Text="Tabel Entry"/>
+                        <ImageCell Text="Dotnet Maui Image " Detail="About dotnet Maui"
+                                   ImageSource="World"/>
+                    </TableSection>
+                </TableRoot>
+            </TableView>-->
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

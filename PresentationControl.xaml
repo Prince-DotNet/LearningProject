@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.PresentationControl"
+             Title="PresentationControl">
+    <ScrollView Margin="5,10,5,10">
+    <VerticalStackLayout>
+                         <!--BOX VIEW-->
+        <BoxView BackgroundColor="gray" HeightRequest="200"/>
+        <Label Text="Dotnet Maui" TextColor="LightGray"
+               FontAttributes="Bold" FontSize="Title"
+               HorizontalOptions="Center"/>
+        
+                    <!--Ellipse Control-->
+        <Ellipse Fill="Red" Stroke="Green"
+                 StrokeThickness="2" HeightRequest="15" HorizontalOptions="Center"
+                 WidthRequest="15"/>
+
+                   <!--Light Control-->
+        <Line Stroke="red" X1="2" Y1="2" X2="150" Y2="100"
+              StrokeThickness="5"/>
+
+                <!--Rectangle Control-->
+        <Rectangle Fill="Red" Stroke="green"
+                   StrokeThickness="10"
+                   HeightRequest="50"
+                   WidthRequest="100"
+                   RadiusX="12"
+                   RadiusY="12"/>
+        
+        
+                <!--Polygon Control-->
+        <Polygon Fill="Yellow"
+                 Points="30,10,60,70,10,40"
+                 Stroke="Darkred" StrokeThickness="3" 
+                 HeightRequest="100" 
+                 WidthRequest="100"/>
+        
+        <Polygon Fill="Yellow"
+                 Points="30,10,60,70,10,40"
+                 Stroke="Darkred" StrokeThickness="3" 
+                 HeightRequest="100" 
+                 WidthRequest="100"
+                 StrokeDashArray="2,1"
+                 StrokeDashOffset="6"/>
+        
+              <!--Path Control-->
+        <Path Aspect="Uniform" Data="M 10, 100 L 100,100 100, 10Z"
+              HorizontalOptions="Center"
+              VerticalOptions="Center"
+              Stroke="black"/>
+
+              <!--Border Control-->
+            <Border Stroke="yellow"
+                StrokeThickness="5"
+                Padding="16,8"
+                HorizontalOptions="Center"
+                    BackgroundColor="Blue">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="50,0,0,50"/>
+                </Border.StrokeShape>
+                <Label Text="Prince singh"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       TextColor="White" />
+            </Border>
+        
+               <!--Image Control With Frame-->
+            <Frame Margin="10"
+                   BackgroundColor="Black"
+                   Padding="10">
+                <Image Source="dotnet_bot.svg"/>
+            </Frame>
+        
+                <!--WebView Control-->
+            <WebView HeightRequest="500" Source="https://www.google.com/"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

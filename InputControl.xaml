@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.InputControl"
+             Title="InputControl">
+    <VerticalStackLayout>
+        <Label 
+            Text="Welcome to .NET MAUI! Input Controls"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        
+        <!--CheckBox-->
+        <CheckBox IsChecked="True" HeightRequest="50" WidthRequest="50"/>
+
+        <!--Slider-->
+        <Slider x:Name="Slider1"
+                Minimum="0"
+                Maximum="100"
+                MinimumTrackColor="Yellow"
+                MaximumTrackColor="Red"
+                ThumbColor="Gray"
+                ValueChanged="Slider1_ValueChanged"/>
+        <Label x:Name="resultSlider" 
+               HorizontalOptions="Center" 
+               VerticalOptions="Center"/>
+        
+        <!--Steper-->
+        <Stepper x:Name="Steper1"
+                 ValueChanged="Steper1_ValueChanged"
+                 Minimum="0"
+                 Maximum="10"
+                 Increment="1"/>
+        
+        <!--Switch-->
+        <Switch IsEnabled="True"
+                ThumbColor="yellow"/>
+        
+        <!--Date And Time Picker-->
+        <DatePicker HorizontalOptions="CenterAndExpand"></DatePicker>
+        <TimePicker HorizontalOptions="CenterAndExpand"></TimePicker>
+        
+        <!--Entry And Editor Control-->
+        <Entry x:Name="UserTxt"
+               Placeholder="Enter User Name"
+               PlaceholderColor="Gray"
+               IsPassword="True"
+               Keyboard="Numeric" 
+               TextChanged="UserTxt_TextChanged"
+               Completed="UserTxt_Completed" />
+        
+        <Editor Placeholder="Write Short Note Here!"
+                AutoSize="TextChanges"/>
+    </VerticalStackLayout>
+</ContentPage> 

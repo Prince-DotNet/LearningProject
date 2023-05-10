@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.StackPageDemo"
+             Title="StackPageDemo">
+    <StackLayout Spacing="10">
+        <Label 
+            Text="Label One"
+            TextColor="White"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" BackgroundColor="{DynamicResource Cyan100Accent}"/> 
+        <Label 
+            Text="Label Two"
+            TextColor="White"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" BackgroundColor="{DynamicResource Cyan200Accent}" />
+        <Label 
+            Text="Label Three"
+            TextColor="White"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" BackgroundColor="{DynamicResource Cyan300Accent}" />
+        <Label 
+            Text="Label Four"
+            TextColor="White"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" BackgroundColor="{DynamicResource Blue100Accent}" />
+    </StackLayout>
+</ContentPage>

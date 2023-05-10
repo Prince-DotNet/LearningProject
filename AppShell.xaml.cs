@@ -1,4 +1,4 @@
-﻿namespace Expander;
+﻿namespace MauiApp1;
 
 public partial class AppShell : Shell
 {

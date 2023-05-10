@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.DetailPage"
+             xmlns:skia="clr-namespace:SkiaSharp.Extended.UI.Controls;assembly=SkiaSharp.Extended.UI"
+             Title="DetailPage">
+    <ScrollView>
+        <StackLayout>
+        <Frame HeightRequest="150" Margin="5,10,5,10" 
+               Grid.ColumnSpan="3" 
+               WidthRequest="70" 
+               BackgroundColor="#F3E8EA"
+               CornerRadius="5">
+            <Label Margin="135,-10,20,10"  Text="Topic" TextColor="Gray" FontSize="20" FontAttributes="Bold"/>
+        </Frame>
+            <Editor x:Name="EditorControl"/>
+            <StackLayout Orientation="Horizontal">
+               
+                <Button Text="Italic" Clicked="Button_Clicked_1" />
+                <Button Text="Bold" Clicked="Button_Clicked"/>
+                <Button Text="Nonegh" Clicked="Button_Clicked_2"/>
+                <Button Text="Font Size +" Clicked="Button_Clicked_3"/>
+                <Button Text="Font Size -" Clicked="Button_Clicked_4"/>
+                
+            </StackLayout>
+        
+        
+        
+        
+        
+        </StackLayout>
+     
+        
+    </ScrollView>
+    
+
+
+</ContentPage>
