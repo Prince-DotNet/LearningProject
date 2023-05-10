@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="Expander.ExpanderFrame"
+             Title="ExpanderFrame">
+
+    <StackLayout Spacing="10">
+        <mct:Expander x:Name="MyExpander">
+            <mct:Expander.Header>
+                <Grid BackgroundColor="LightGray" Padding="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Simple Expander(Tap Me)" FontSize="16" 
+                           FontAttributes="Bold" Grid.Column="0"/>
+                    <Image Grid.Column="1" x:Name="HeaderImages" HeightRequest="30"
+                           WidthRequest="30" Source="downimage.svg">
+                        <Image.Triggers>
+                            <DataTrigger TargetType="Image" Binding="{Binding Source={x:Reference MyExpander},Path=IsExpanded}" 
+                                         Value="True">
+                                <Setter Property="Rotation" Value="180"/>
+                            </DataTrigger>
+                        </Image.Triggers>
+                    </Image>
+                </Grid>
+            </mct:Expander.Header>
+            <mct:Expander.Content>
+                <StackLayout Padding="10">
+                    <Label Text="Item 1"/>
+                    <Label Text="Item 2"/>
+                </StackLayout>
+            </mct:Expander.Content>
+        </mct:Expander>
+        <BoxView WidthRequest="5" Color="red" Margin="10,0,0,10"></BoxView>
+        <mct:Expander x:Name="SecondExpander">
+            <mct:Expander.Header>
+                <Grid BackgroundColor="LightGray" Padding="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Second Expender" FontSize="16" 
+                           FontAttributes="Bold" Grid.Column="0"/>
+                    <Image Grid.Column="1" x:Name="HeaderImage" HeightRequest="30"
+                           WidthRequest="30" Source="downimage.svg">
+                        <Image.Triggers>
+                            <DataTrigger TargetType="Image" Binding="{Binding Source={x:Reference SecondExpander},Path=IsExpander}" 
+                                         Value="True">
+                                <Setter Property="Rotation" Value="180"/>
+                            </DataTrigger>
+                        </Image.Triggers>
+                    </Image>
+                </Grid>
+            </mct:Expander.Header>
+            <mct:Expander.Content>
+                <StackLayout Padding="10">
+                    <Label Text="Item 3"/>
+                    <Label Text="Item 4"/>
+                </StackLayout>
+            </mct:Expander.Content>
+        </mct:Expander>
+    </StackLayout>
+  </ContentPage>
